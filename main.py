@@ -14,8 +14,14 @@ def read_log_file_reverse(filename):
                 print(line.rstrip())
     except FileNotFoundError:
         print('Error: File not found.')
+    except UnicodeDecodeError:
+        print('Error: Could not decode the file. Please check the file encoding.')
+    except PermissionError:
+        print('Error: Permission denied. Please check the file permissions.')
     except IOError:
         print('Error: Could not read the file.')
+    except Exception as e:
+        print(f'An unexpected error occurred: {e}')
 
 
 def extract_problem_logs(filename, output_filename):
@@ -41,8 +47,14 @@ def extract_problem_logs(filename, output_filename):
                     outfile.write(line)
     except FileNotFoundError:
         print('Error: File not found.')
+    except UnicodeDecodeError:
+        print('Error: Could not decode the file. Please check the file encoding.')
+    except PermissionError:
+        print('Error: Permission denied. Please check the file permissions.')
     except IOError:
-        print('Error: Could not read or write the file.')
+        print('Error: Could not read the file.')
+    except Exception as e:
+        print(f'An unexpected error occurred: {e}')
 
 
 def main():
