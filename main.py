@@ -25,7 +25,7 @@ def extract_problem_logs(filename, output_filename):
     :param filename: str - Path to the original log file.
     :param output_filename: str - Path for the extracted problem log file.
     """
-    keywords = ['unstable', 'explosion', 'ERROR', 'FAIL']
+    keywords = ['unstable', 'explosion', 'ERROR', 'FAIL','sysytem down']
     try:
         with open(filename, 'r', encoding='utf-8') as infile:
             problem_lines = []
@@ -46,10 +46,19 @@ def extract_problem_logs(filename, output_filename):
 
 
 def main():
-    read_log_file_reverse('mission_computer_main.log')
+    """
+    파이썬 3.13 버전 설치
+    """
+    print('Hello Mars')
+    """
+    절대위치로 파일지정
+    """
+    log_file = r'C:\Users\52649\Documents\GitHub\python_codyseey\Step01\01\PYTHON-PBL01_01\mission_computer_main.log'
+    problem_logs_file = r'C:\Users\52649\Documents\GitHub\python_codyseey\Step01\01\PYTHON-PBL01_01\mission_computer_main.log'
+    read_log_file_reverse(log_file)
     extract_problem_logs(
-        'mission_computer_main.log',
-        'problem_logs.log'
+        log_file,
+        problem_logs_file
     )
 
 
