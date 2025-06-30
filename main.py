@@ -25,7 +25,7 @@ def extract_problem_logs(filename, output_filename):
     :param filename: str - Path to the original log file.
     :param output_filename: str - Path for the extracted problem log file.
     """
-    keywords = ['unstable', 'explosion', 'ERROR', 'FAIL','sysytem down']
+    keywords = ['unstable', 'explosion', 'ERROR', 'FAIL','powered down']
     try:
         with open(filename, 'r', encoding='utf-8') as infile:
             problem_lines = []
@@ -51,10 +51,10 @@ def main():
     """
     print('Hello Mars')
     """
-    절대위치로 파일지정
+    절대위치로 파일지정(사용자 위치에 맞춰서 수정해야합니다.)
     """
     log_file = r'C:\Users\52649\Documents\GitHub\python_codyseey\Step01\01\PYTHON-PBL01_01\mission_computer_main.log'
-    problem_logs_file = r'C:\Users\52649\Documents\GitHub\python_codyseey\Step01\01\PYTHON-PBL01_01\mission_computer_main.log'
+    problem_logs_file = r'C:\Users\52649\Documents\GitHub\python_codyseey\Step01\01\PYTHON-PBL01_01\problem_logs.log'
     read_log_file_reverse(log_file)
     extract_problem_logs(
         log_file,
