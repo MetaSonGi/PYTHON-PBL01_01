@@ -54,8 +54,9 @@
 - `log_analysis.md`  
   → 로그를 기반으로 한 사고 원인 분석 보고서 (Markdown 형식)
 
-- 'mission_computer_main.log'
- → 사고 원인 로그
+- `mission_computer_main.log`  
+  → 사고 원인 로그
+
 
 ---
 
